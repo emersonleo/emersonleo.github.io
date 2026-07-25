@@ -55,8 +55,11 @@ export function whatsappUrl(message: string = contact.whatsappMessage): string {
 // ║ 3. SEO / METADADOS                                                        ║
 // ╚══════════════════════════════════════════════════════════════════════════╝
 export const seo = {
-  // ⚠️ [PREENCHER] Domínio final (mesmo valor de `site` em astro.config.mjs).
-  siteUrl: "https://seu-dominio.com.br",
+  // URL pública COMPLETA da home (origem + subcaminho).
+  // DEMO no GitHub Pages: inclui o "/priscila". Usada nos dados estruturados.
+  // ⚠️ [PREENCHER] Ao usar domínio próprio, troque para "https://seu-dominio.com.br"
+  // (sem subcaminho) e ajuste `site`/`base` em astro.config.mjs.
+  siteUrl: "https://emersonleo.github.io/priscila",
   title: `${profile.name} · Psicóloga Online (Gestalt) — Adolescentes, Adultos e Idosos`,
   description:
     "Psicóloga clínica bilíngue (PT/EN) com atendimento 100% online em Gestalt-terapia. " +

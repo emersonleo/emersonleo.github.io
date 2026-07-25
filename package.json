@@ -10,7 +10,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "make:og": "node scripts/make-og.mjs"
+    "make:og": "node scripts/make-og.mjs",
+    "deploy:pages": "astro build && node scripts/copy-to-pages.mjs"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.2.1",

@@ -114,11 +114,37 @@ O build gera arquivos estáticos em `dist/` — hospede em qualquer serviço est
   → conecte o repositório:
   - **Build command:** `npm run build` · **Build output directory:** `dist`
 
-### GitHub Pages (opcional — este repo é `emersonleo.github.io`)
-Como é um site estático, também dá para servir via GitHub Pages. Nesse caso, o `site`
-em `astro.config.mjs` deve ser a URL do Pages e o conteúdo de `dist/` precisa ir para a
-branch/publicação configurada. Recomendo Netlify/Vercel/Cloudflare pela simplicidade e
-por domínio próprio.
+### GitHub Pages — DEMO em subcaminho (configuração atual) ⭐
+
+A demo está configurada para ficar em **`https://emersonleo.github.io/priscila/`**,
+sem tocar na raiz nem na demo `/pride/`. Isso já está montado:
+
+- `astro.config.mjs`: `site: "https://emersonleo.github.io"` + `base: "/priscila"`.
+- `.nojekyll` na raiz (essencial: sem ele o Jekyll do Pages ignora a pasta `_astro/` e
+  quebra todo o CSS/JS).
+- A pasta **`priscila/`** (versionada) contém o site já buildado que o Pages publica.
+
+**Para publicar/atualizar a demo:**
+
+```bash
+npm run deploy:pages   # roda o build e copia dist/ → priscila/
+git add -A
+git commit -m "deploy demo"
+git push
+```
+
+Em ~1 minuto o site aparece em `https://emersonleo.github.io/priscila/`.
+(O Pages precisa estar servindo a branch `main` a partir da raiz — que é como a
+`/pride/` já funciona; nenhuma mudança de configuração é necessária.)
+
+> **Ao migrar para o domínio próprio:** em `astro.config.mjs` troque `site` pela URL real
+> e **remova a linha `base`**; ajuste `seo.siteUrl` (`src/data/site.ts`) e o `Sitemap`
+> em `public/robots.txt`. Aí volta a valer o deploy comum (Netlify/Vercel/Cloudflare
+> na raiz), e a pasta `priscila/` pode ser apagada.
+
+### Outros hosts (para o domínio próprio, futuramente)
+Como é um site estático, também roda em Netlify/Vercel/Cloudflare (seções acima),
+que são mais simples com domínio próprio.
 
 ---
 

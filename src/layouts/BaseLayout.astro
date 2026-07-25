@@ -16,9 +16,12 @@ interface Props {
 
 const { title = seo.title, description = seo.description } = Astro.props;
 
-// URL canônica (usa `site` do astro.config.mjs).
-const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? seo.siteUrl);
-const ogImageURL = new URL(seo.ogImage, Astro.site ?? seo.siteUrl);
+// URL canônica e og:image — cientes do `base` (subcaminho) do Astro.
+// `import.meta.env.BASE_URL` já vem com barra final (ex.: "/priscila/").
+const origin = Astro.site ?? new URL(seo.siteUrl).origin;
+const base = import.meta.env.BASE_URL;
+const canonicalURL = new URL(Astro.url.pathname, origin);
+const ogImageURL = new URL(base.replace(/\/$/, "") + seo.ogImage, origin);
 ---
 
 <!doctype html>
