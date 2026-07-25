@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# ⚠️ [PREENCHER] Troque pelo domínio final (mesma URL de `site` no astro.config.mjs).
+Sitemap: https://seu-dominio.com.br/sitemap-index.xml
