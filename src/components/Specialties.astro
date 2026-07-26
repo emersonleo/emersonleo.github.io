@@ -7,11 +7,11 @@
  */
 import { specialties, whatsappUrl } from "../data/site";
 
-// CTA contextual por área.
+// CTA contextual por área (tom exploratório — sem parecer compromisso fechado).
 const withCta = specialties.items.map((s) => ({
   ...s,
   cta: whatsappUrl(
-    `Olá, Priscila! Vim pelo seu site e gostaria de conversar sobre ${s.label.toLowerCase()}.`,
+    `Olá, Priscila! Vim pelo seu site e gostaria de saber mais sobre atendimento para ${s.label.toLowerCase()}.`,
   ),
 }));
 ---

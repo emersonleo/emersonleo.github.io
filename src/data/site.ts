@@ -37,8 +37,9 @@ export const contact = {
   // ⚠️ Confirmar com a cliente se este é o número público para agendamentos.
   whatsappNumber: "5581983415584",
   whatsappDisplay: "(81) 98341-5584",
-  // Mensagem pré-preenchida ao abrir o WhatsApp.
-  whatsappMessage: "Olá, Priscila! Vim pelo seu site e gostaria de agendar uma consulta.",
+  // Mensagem pré-preenchida ao abrir o WhatsApp — tom exploratório (sem parecer
+  // que o simples envio já confirma/fecha um atendimento).
+  whatsappMessage: "Olá, Priscila! Vim pelo seu site e gostaria de saber mais sobre os seus atendimentos.",
   // ⚠️ Gmail pessoal (funciona). Sugestão futura: e-mail com domínio próprio.
   email: "priscila.pvsg2@gmail.com",
   linkedin: "https://www.linkedin.com/in/priscila-goncalves-psi",
@@ -63,7 +64,7 @@ export const seo = {
   title: `${profile.name} · Psicóloga Online (Gestalt) — Adolescentes, Adultos e Idosos`,
   description:
     "Psicóloga clínica bilíngue (PT/EN) com atendimento 100% online em Gestalt-terapia. " +
-    `Psicoterapia para ${ageRange}, brasileiros no exterior e escuta sensível a questões raciais. ${profile.crp}.`,
+    `Psicoterapia para ${ageRange} no Brasil e no exterior, com escuta sensível a questões raciais, de gênero e sexualidade. ${profile.crp}.`,
   ogImage: "/og-image.jpg", // gerada por `npm run make:og`
   keywords: [
     "psicóloga online",
@@ -75,7 +76,9 @@ export const seo = {
     "psicóloga negra",
     "escuta sensível a questões raciais",
     "terapia online para adolescentes",
-    "apoio psicológico diabetes",
+    "psicóloga afirmativa LGBTQIAP+",
+    "terapia para ansiedade e trauma",
+    "terapia de relacionamentos",
   ],
   locale: "pt_BR",
 };
@@ -97,10 +100,11 @@ export const nav: { label: string; href: string }[] = [
 // ╚══════════════════════════════════════════════════════════════════════════╝
 export const hero = {
   // H1 — headline principal (único <h1> do site).
-  headline: `Psicoterapia online para ${ageRange}`,
-  subheadline:
-    "Um espaço acolhedor para você se cuidar por inteiro. Atendimento 100% online e " +
-    "bilíngue (português e inglês), com escuta sensível a partir da Gestalt-terapia.",
+  headline: `Psicoterapia online para ${ageRange} no Brasil e no exterior`,
+  // Subheadline mais direta (bom para leitura e para Google Ads).
+  subheadline: `Um espaço de escuta acolhedora para ${ageRange}. Atendimento 100% online, em português e inglês, com abordagem em Gestalt-terapia.`,
+  // Selo de localização logo abaixo do título (ajuda no SEO local).
+  locationBadge: "Atendimento online para todo o Brasil e brasileiros que vivem no exterior",
   primaryCta: "Agende sua consulta",
   secondaryCta: "Conheça meu trabalho",
   trustSignals: ["Atendimento online", "Bilíngue PT/EN", "Formação internacional (GATLA)"],
@@ -115,10 +119,9 @@ export const about = {
   eyebrow: "Quem sou eu",
   title: "Uma escuta atenta para a sua história",
   paragraphs: [
-    `Sou psicóloga clínica, bilíngue (português e inglês), e atendo ${ageRange}.`,
-    "Minha experiência como intercambista despertou um interesse especial pela psicologia transcultural e pelos processos migratórios, ampliando meu olhar para as vivências de identidade, pertencimento, adaptação cultural e os desafios emocionais envolvidos em mudanças de contexto.",
-    "Como mulher negra, valorizo uma escuta sensível às questões raciais e às diversas experiências que atravessam a vida das pessoas, oferecendo um espaço aberto e acolhedor para todos.",
-    "Independentemente da demanda, procuro oferecer um cuidado que considere a pessoa para além do sintoma, respeitando sua história, seu contexto e sua forma única de estar no mundo.",
+    `Sou psicóloga clínica e atendo ${ageRange} em português e inglês.`,
+    "Minha trajetória internacional despertou um interesse especial pela psicologia transcultural e pelos processos migratórios, ampliando meu olhar para questões de identidade, pertencimento e adaptação cultural.",
+    "Minha prática valoriza uma escuta sensível às diferentes experiências de vida, incluindo questões raciais, culturais e de pertencimento, sempre respeitando a singularidade de cada pessoa.",
   ],
   imageAlt:
     "Priscila Santos segurando livros, com olhar acolhedor, em ambiente iluminado por luz natural",
@@ -131,8 +134,8 @@ export const approach = {
   eyebrow: "Como eu trabalho",
   title: "Gestalt-terapia: um cuidado construído no encontro",
   paragraphs: [
-    "Atuo a partir da Gestalt-terapia, uma abordagem construída no encontro. Busco oferecer uma presença genuína, uma escuta atenta e um espaço de acolhimento, caminhando ao lado de cada pessoa enquanto ela amplia sua consciência sobre si e descobre novas possibilidades de existir.",
-    "Enxergo cada processo terapêutico em sua singularidade, considerando suas histórias, seus vínculos e os contextos em que o indivíduo está inserido. Mais do que focar apenas no sintoma, olhamos para a sua experiência no presente — no seu ritmo e do seu jeito.",
+    "A Gestalt-terapia entende que cada pessoa é única. Meu trabalho busca construir, junto com você, um espaço de presença, escuta e acolhimento para compreender sua experiência e ampliar possibilidades de viver.",
+    "Mais do que olhar apenas para os sintomas, considero a sua história, os seus vínculos e o contexto em que você vive.",
   ],
   pillars: [
     { title: "Presença genuína", text: "Um encontro real, sem julgamentos, onde você pode ser você." },
@@ -165,7 +168,7 @@ export const specialties = {
     {
       id: "ansiedade",
       label: "Ansiedade",
-      text: "A ansiedade pode tomar conta do corpo e dos pensamentos, deixando tudo mais urgente e cansativo. Na terapia, criamos um espaço para compreender o que ela comunica e encontrar, no seu ritmo, formas mais leves de estar consigo e com o mundo.",
+      text: "A ansiedade pode trazer sofrimento e tornar o dia a dia mais difícil. Na terapia, buscamos compreender o que ela comunica e encontrar formas mais saudáveis de lidar com essa experiência.",
     },
     {
       id: "depressao",
@@ -178,14 +181,29 @@ export const specialties = {
       text: "Perder alguém ou algo importante reorganiza toda a nossa vida. Ofereço um espaço de escuta para atravessar o luto no seu tempo, honrando o que foi e o que permanece.",
     },
     {
+      id: "trauma",
+      label: "Trauma",
+      text: "Experiências difíceis podem deixar marcas que seguem presentes no dia a dia. Na terapia, criamos um espaço seguro para elaborar essas vivências no seu tempo, com cuidado e respeito.",
+    },
+    {
       id: "autoestima",
       label: "Autoestima",
       text: "A forma como nos enxergamos afeta cada relação e cada escolha. Na terapia, exploramos com cuidado essa relação com você mesmo(a), ampliando a consciência sobre quem você é para além das cobranças.",
     },
     {
+      id: "relacionamentos",
+      label: "Relacionamentos interpessoais",
+      text: "As relações com as pessoas ao redor influenciam diretamente o nosso bem-estar. Podemos olhar juntos para os seus vínculos e para as formas de se relacionar de um jeito mais saudável e autêntico.",
+    },
+    {
       id: "conflitos-familiares",
       label: "Conflitos familiares",
       text: "As relações familiares carregam afeto e também tensões que, às vezes, travam. Podemos olhar juntos para esses vínculos e para o seu lugar neles, buscando formas mais saudáveis de se relacionar.",
+    },
+    {
+      id: "genero-sexualidade",
+      label: "Gênero e sexualidade",
+      text: "Questões de gênero e sexualidade merecem um espaço livre de julgamentos. Ofereço uma escuta acolhedora e afirmativa para pessoas LGBTQIAP+, respeitando a sua identidade, os seus afetos e a sua história.",
     },
     {
       id: "racismo",
@@ -199,13 +217,13 @@ export const specialties = {
     },
     {
       id: "doencas-cronicas",
-      label: "Doenças crônicas (diabetes)",
-      text: "Conviver com uma doença crônica, como o diabetes, envolve desafios emocionais que vão muito além do corpo. Ofereço um cuidado que considera a pessoa por inteiro, e não apenas o diagnóstico.",
+      label: "Aspectos emocionais das doenças crônicas",
+      text: "Conviver com uma doença crônica envolve desafios emocionais que vão muito além do corpo. Ofereço um cuidado que considera a pessoa por inteiro, e não apenas o diagnóstico.",
     },
     {
-      id: "abuso-sexual",
-      label: "Abuso sexual",
-      text: "Falar sobre experiências de abuso exige um espaço seguro, respeitoso e sem pressa. Estou aqui para acolher a sua história com cuidado e sigilo, no tempo que for possível para você.",
+      id: "violencia-sexual",
+      label: "Vivências relacionadas à violência sexual",
+      text: "Falar sobre experiências de violência sexual exige um espaço seguro, respeitoso e sem pressa. Estou aqui para acolher a sua história com cuidado e sigilo, no tempo que for possível para você.",
     },
   ] satisfies Specialty[],
 };
@@ -215,14 +233,15 @@ export const specialties = {
 // ╚══════════════════════════════════════════════════════════════════════════╝
 export const audience = {
   eyebrow: "Você se identifica?",
-  title: "Talvez este seja um espaço para você",
+  title: "Talvez eu possa te acompanhar",
   intro: "A terapia pode fazer sentido especialmente se você:",
   items: [
-    `É adolescente, adulto ou idoso em busca de um espaço de escuta`,
+    "É adolescente, adulto ou idoso em busca de um espaço de escuta",
     "É brasileiro(a) vivendo no exterior ou passando por um processo de adaptação cultural",
     "Está atravessando mudanças de contexto que mexem com identidade e pertencimento",
     "Procura uma escuta sensível a questões raciais",
-    "Convive com uma doença crônica, como o diabetes, e seus desafios emocionais",
+    "Busca um espaço afirmativo para questões de gênero e sexualidade",
+    "Convive com os desafios emocionais de uma doença crônica",
     "Quer ser cuidado(a) por inteiro — para além do sintoma",
   ],
 };
@@ -230,9 +249,18 @@ export const audience = {
 // ╔══════════════════════════════════════════════════════════════════════════╗
 // ║ 10. ÉTICA PROFISSIONAL                                                    ║
 // ╚══════════════════════════════════════════════════════════════════════════╝
+export interface EthicsItem {
+  title: string;
+  text: string;
+  link?: { href: string; label: string };
+}
+
 export const ethics = {
   eyebrow: "Ética profissional",
   title: "Um cuidado sério e sigiloso",
+  intro:
+    "Meu trabalho é orientado pelo Código de Ética Profissional do Psicólogo e pelo " +
+    "compromisso com um atendimento responsável, respeitoso e sigiloso.",
   items: [
     {
       title: "Sigilo e confidencialidade",
@@ -248,9 +276,14 @@ export const ethics = {
     },
     {
       title: "Código de Ética",
-      text: "Compromisso com o Código de Ética Profissional do Psicólogo em cada atendimento.",
+      text: "Compromisso com o Código de Ética Profissional do Psicólogo em cada atendimento. Por transparência, o documento está disponível na íntegra.",
+      // Link oficial do CFP (transparência).
+      link: {
+        href: "https://site.cfp.org.br/wp-content/uploads/2012/07/codigo-de-etica-psicologia.pdf",
+        label: "Ler o Código de Ética (CFP)",
+      },
     },
-  ],
+  ] satisfies EthicsItem[],
 };
 
 // ╔══════════════════════════════════════════════════════════════════════════╗
@@ -258,10 +291,10 @@ export const ethics = {
 // ╚══════════════════════════════════════════════════════════════════════════╝
 export const credentials = {
   eyebrow: "Formação e credenciais",
-  title: "Uma formação sólida e internacional",
+  title: "Formação acadêmica e experiência internacional",
   intro:
-    "No início de carreira, trago uma formação diferenciada em Gestalt-terapia, com " +
-    "vivência internacional e um olhar transcultural para o cuidado.",
+    "Minha formação reúne Psicologia, Gestalt-terapia e experiências internacionais que " +
+    "ampliaram meu olhar para diferentes contextos culturais.",
   education: [
     {
       institution: "Centro Universitário Frassinetti do Recife",
@@ -327,22 +360,37 @@ export const faq = {
       a: "É uma abordagem construída no encontro, que dá atenção à sua experiência no presente. Mais do que focar apenas no sintoma, buscamos ampliar a consciência sobre você mesmo(a) e descobrir, no seu ritmo, novas possibilidades de existir.",
     },
     {
+      q: "Como saber se a Gestalt-terapia é adequada para mim?",
+      a: "Podemos conversar sobre isso antes de começar. A proposta é olhar para a sua experiência de forma singular, no seu ritmo. Se fizer sentido para você, seguimos juntos nesse processo.",
+    },
+    {
       q: "Você atende em inglês?",
       a: "Sim. O atendimento é bilíngue (português e inglês), o que facilita o cuidado com brasileiros no exterior e com pessoas que vivem entre culturas.",
+    },
+    {
+      q: "Posso fazer terapia morando fora do Brasil?",
+      a: "Sim. O atendimento é 100% online e acompanho brasileiros que vivem no exterior. Os horários são combinados de acordo com o seu fuso, para caber na sua rotina — em português ou inglês.",
     },
     {
       q: "As sessões são sigilosas?",
       a: "Sim. O sigilo é um princípio ético fundamental da psicologia e é resguardado pelo Código de Ética Profissional do Psicólogo. O que você compartilha permanece protegido.",
     },
     {
-      q: "Atende de quais lugares? E o fuso horário?",
-      a: "O atendimento é 100% online, para todo o Brasil e para brasileiros no exterior. Os horários são combinados considerando o seu fuso, para caber na sua rotina.",
+      q: "Preciso ter um diagnóstico para iniciar a terapia?",
+      a: "Não. Você não precisa de um diagnóstico nem de um motivo específico para começar. Podemos partir do que está te mobilizando neste momento.",
     },
     {
-      // ⚠️ [CONFIRMAR] Duração e frequência não constavam nos materiais.
-      // Ajuste os valores entre colchetes ou remova este item se preferir.
+      q: "E se eu nunca fiz terapia antes?",
+      a: "Tudo bem começar do zero. No primeiro contato explico como funciona e seguimos no seu ritmo, sem pressa, para que você se sinta à vontade.",
+    },
+    {
       q: "Qual a duração e a frequência das sessões?",
-      a: "Em geral, as sessões têm cerca de [50 minutos] e acontecem com frequência [semanal], mas isso é conversado e ajustado conforme a sua necessidade.",
+      // ⚠️ [CONFIRMAR] valores padrão do mercado; ajuste se a Priscila trabalhar diferente.
+      a: "As sessões costumam ter cerca de 50 minutos e acontecem, em geral, semanalmente — mas a frequência é combinada e ajustada conforme a sua necessidade.",
+    },
+    {
+      q: "Como funcionam os valores e o pagamento (inclusive para quem mora no exterior)?",
+      a: "Os valores e as formas de pagamento — inclusive para quem mora fora do Brasil — são apresentados diretamente comigo, no primeiro contato pelo WhatsApp, antes do agendamento da sessão. Assim consigo esclarecer todas as suas dúvidas.",
     },
     {
       q: "Como faço para agendar?",
@@ -358,8 +406,8 @@ export const contactSection = {
   eyebrow: "Vamos conversar",
   title: "Agende sua consulta",
   intro:
-    "O primeiro passo pode ser simples. Envie uma mensagem no WhatsApp e combinamos, " +
-    "com calma, o melhor horário para você. Esclareço qualquer dúvida antes da primeira sessão.",
+    "Se desejar conversar, envie uma mensagem pelo WhatsApp. Será um prazer esclarecer " +
+    "suas dúvidas e combinar o melhor horário para a nossa primeira sessão.",
   whatsappCta: "Conversar no WhatsApp",
   // Se quiser usar o formulário (opcional), configure o Formspree no README.
   // Deixe "" para esconder o formulário e manter só o WhatsApp/e-mail.
@@ -372,4 +420,25 @@ export const contactSection = {
 export const footer = {
   tagline: "Psicoterapia online, acolhedora e bilíngue.",
   note: profile.serviceMode,
+};
+
+// ╔══════════════════════════════════════════════════════════════════════════╗
+// ║ 15. LEGAL (rodapé + páginas de Privacidade/LGPD e Termos)                 ║
+// ╚══════════════════════════════════════════════════════════════════════════╝
+// ⚠️ Os textos das páginas legais são um ponto de partida honesto sobre como o
+// site funciona. Recomende à Priscila revisá-los (idealmente com apoio jurídico)
+// antes de considerá-los definitivos.
+export const legal = {
+  // Nota curta exibida no rodapé.
+  cfpNote:
+    "Atendimento online realizado conforme a regulamentação vigente do Conselho " +
+    "Federal de Psicologia (Resolução CFP nº 11/2018).",
+  lgpdNote:
+    "Este site respeita a sua privacidade e a Lei Geral de Proteção de Dados (LGPD nº 13.709/2018).",
+  // Slugs das páginas (o base do Astro é aplicado nos componentes).
+  links: [
+    { label: "Política de Privacidade", slug: "privacidade" },
+    { label: "Termos de Uso", slug: "termos" },
+  ],
+  updatedAt: "julho de 2026", // ⚠️ [PREENCHER] data da última atualização
 };
