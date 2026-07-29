@@ -41,10 +41,10 @@ export const contact = {
   // que o simples envio já confirma/fecha um atendimento).
   whatsappMessage: "Olá, Priscila! Vim pelo seu site e gostaria de saber mais sobre os seus atendimentos.",
   // ⚠️ Gmail pessoal (funciona). Sugestão futura: e-mail com domínio próprio.
-  email: "priscila.pvsg2@gmail.com",
+  email: "psicologia.priscilasantos@gmail.com",
   linkedin: "https://www.linkedin.com/in/priscila-goncalves-psi",
   // [PREENCHER opcional] Instagram / outras redes — deixe "" se não houver.
-  instagram: "",
+  instagram: "https://www.instagram.com/psi.priscilasantoss/",
 };
 
 /** Monta um link wa.me com a mensagem pré-preenchida e URL-encoded. */
@@ -103,8 +103,8 @@ export const hero = {
   headline: `Psicoterapia online para ${ageRange} no Brasil e no exterior`,
   // Subheadline mais direta (bom para leitura e para Google Ads).
   subheadline: `Um espaço de escuta acolhedora para ${ageRange}. Atendimento 100% online, em português e inglês, com abordagem em Gestalt-terapia.`,
-  // Selo de localização logo abaixo do título (ajuda no SEO local).
-  locationBadge: "Atendimento online para todo o Brasil e brasileiros que vivem no exterior",
+    // Selo de localização logo abaixo do título (ajuda no SEO local).
+  locationBadge: "Atendimento online (todo o Brasil e exterior)",
   primaryCta: "Agende sua consulta",
   secondaryCta: "Conheça meu trabalho",
   trustSignals: ["Atendimento online", "Bilíngue PT/EN", "Formação internacional (GATLA)"],
