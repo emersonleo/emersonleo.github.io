@@ -60,7 +60,7 @@ export const seo = {
   // DEMO no GitHub Pages: inclui o "/priscila". Usada nos dados estruturados.
   // ⚠️ [PREENCHER] Ao usar domínio próprio, troque para "https://seu-dominio.com.br"
   // (sem subcaminho) e ajuste `site`/`base` em astro.config.mjs.
-  siteUrl: "https://emersonleo.github.io/priscila",
+  siteUrl: "https://priscilasantospsi.com.br",
   title: `${profile.name} · Psicóloga Online (Gestalt) — Adolescentes, Adultos e Idosos`,
   description:
     "Psicóloga clínica bilíngue (PT/EN) com atendimento 100% online em Gestalt-terapia. " +
