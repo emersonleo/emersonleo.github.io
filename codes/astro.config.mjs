@@ -9,7 +9,7 @@ import sitemap from "@astrojs/sitemap";
 // e REMOVA a linha `base` abaixo. Mantenha em sincronia com `seo.siteUrl`
 // em src/data/site.ts e com o Sitemap em public/robots.txt.
 const SITE_URL = "https://emersonleo.github.io";
-const BASE_PATH = "/priscila"; // subcaminho da demo; remova ao usar domínio próprio
+const BASE_PATH = "/"; // usando raiz do repositório (site no domínio principal)
 
 // https://astro.build/config
 export default defineConfig({
